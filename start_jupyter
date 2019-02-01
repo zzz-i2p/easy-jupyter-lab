@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+pgcontents init -l $DATABASE_URL --no-prompt
+
+jupyterlab contrib nbextension install --user
+jupyterlab nbextensions_configurator enable --user
+
+jupyterlab notebook \
+	--no-browser --no-mathjax --ip=* --port $PORT \
+	$JUPYTER_NOTEBOOK_ARGS \
+	notebooks

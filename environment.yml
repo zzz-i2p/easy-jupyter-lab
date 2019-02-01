@@ -1,0 +1,22 @@
+name: easy-jupyter-lab
+dependencies:
+  # персонализация ноутбука версия (совместимость с pgcontents)
+  - notebook = 4
+  - ipywidgets
+  - requests
+  # связать оболочкой IPython версия (совместимость с pgcontents)
+  - ipython = 5
+  # связывать версия торнадо (проблемы с WebSocket)
+  - tornado = 4.5
+  # получить зависимости для pgcontents
+  - certifi
+  - click
+  - cryptography 
+  - mako
+  - psycopg2
+  - six
+  - sqlalchemy
+  - nose
+  - pip:
+    - pgcontents
+    - git+git://github.com/ipython-contrib/jupyter_contrib_nbextensions.git

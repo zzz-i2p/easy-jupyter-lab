@@ -1,0 +1,29 @@
+{
+  "name": "jupyter-lab",
+  "buildpacks": [
+    { "url": "https://github.com/heroku/heroku-buildpack-python.git" }
+  ],
+  "env": {
+    "JUPYTER_NOTEBOOK_PASSWORD": {
+      "description": "IMPORTANT! Set a secure password."
+    },
+    "JUPYTER_NOTEBOOK_ARGS": {
+      "description": "Дополнительные аргументы командной строки .",
+      "required": false,
+      "value": ""
+    },
+    "ENVIRONMENT_YML": {
+      "description": "Альтернатива environment.yml путь.",
+      "required": false,
+      "value": ""
+    },
+    "ADDITIONAL_ENVIRONMENT_YML": {
+      "description": "Дополнительные environment.yml путь.",
+      "required": false,
+      "value": ""
+    }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ]
+}
